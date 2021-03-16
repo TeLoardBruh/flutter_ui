@@ -49,8 +49,8 @@ class HomePage extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
                   Container(
-                    width: 180,
-                    height: 230,
+                    width: MediaQuery.of(context).size.width / 3,
+                    height: MediaQuery.of(context).size.height/ 2,
                     padding: EdgeInsets.all(50),
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(30),
@@ -88,8 +88,8 @@ class HomePage extends StatelessWidget {
                     ),
                   ),
                   Container(
-                    width: 180,
-                    height: 230,
+                    width: MediaQuery.of(context).size.width / 3,
+                    height: MediaQuery.of(context).size.height / 2,
                     padding: EdgeInsets.all(45),
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(30),
@@ -131,9 +131,10 @@ class HomePage extends StatelessWidget {
             ),
             Expanded(
               child: SingleChildScrollView(
-                              child: Container(
+                child: Container(
                   // height: 100,
                   // width: 100,
+                  height: MediaQuery.of(context).size.height,
                   padding: EdgeInsets.all(30),
                   decoration: BoxDecoration(
                     color: Colors.white,
@@ -180,9 +181,7 @@ class HomePage extends StatelessWidget {
                                 Text(
                                   'Auto lean',
                                   style: TextStyle(
-                                    color: Colors.grey,
-                                    fontSize: 13
-                                  ),
+                                      color: Colors.grey, fontSize: 13),
                                 ),
                               ],
                             ),
@@ -203,9 +202,7 @@ class HomePage extends StatelessWidget {
                                 Text(
                                   'Airbnb house',
                                   style: TextStyle(
-                                    color: Colors.grey,
-                                    fontSize: 13
-                                  ),
+                                      color: Colors.grey, fontSize: 13),
                                 ),
                               ],
                             ),
@@ -226,9 +223,7 @@ class HomePage extends StatelessWidget {
                                 Text(
                                   'Uber Passapp',
                                   style: TextStyle(
-                                    color: Colors.grey,
-                                    fontSize: 13
-                                  ),
+                                      color: Colors.grey, fontSize: 13),
                                 ),
                               ],
                             ),
@@ -249,9 +244,7 @@ class HomePage extends StatelessWidget {
                                 Text(
                                   'Nike, Fifa',
                                   style: TextStyle(
-                                    color: Colors.grey,
-                                    fontSize: 13
-                                  ),
+                                      color: Colors.grey, fontSize: 13),
                                 ),
                               ],
                             ),
