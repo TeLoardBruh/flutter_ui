@@ -1,9 +1,13 @@
+import 'package:balance_ui/widgets/header.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    print(MediaQuery.of(context).size.width);
+    print(MediaQuery.of(context).size.height);
     return Scaffold(
+      
       backgroundColor: Color(0xFFB2f26d9),
       body: SafeArea(
         child: Column(
@@ -20,37 +24,21 @@ class HomePage extends StatelessWidget {
                     color: Colors.white,
                   ),
                   Icon(
-                    Icons.notification_important_outlined,
+                    Icons.notifications_active_outlined,
                     color: Colors.white,
                   ),
                 ],
               ),
             ),
+            HeaderText('\$547,000.00','Your Balance',Colors.white),
             Container(
-              padding: EdgeInsets.only(left: 50),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Text(
-                    'Your Balance',
-                    style: TextStyle(color: Color(0xFFB7271ee), fontSize: 20),
-                  ),
-                  Text(
-                    '\$547,000.00',
-                    style: TextStyle(color: Colors.white, fontSize: 25),
-                  )
-                ],
-              ),
-            ),
-            Container(
-              padding: EdgeInsets.only(left: 20, top: 25, bottom: 10),
+              padding: EdgeInsets.only(left: 5, top: 25, bottom: 10),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
                   Container(
-                    width: MediaQuery.of(context).size.width / 3,
-                    height: MediaQuery.of(context).size.height/ 2,
+                    width: MediaQuery.of(context).size.width <= 768 ? 180 : MediaQuery.of(context).size.width / 3,
+                    height: MediaQuery.of(context).size.width <= 768 ? 230 :MediaQuery.of(context).size.height / 2,
                     padding: EdgeInsets.all(50),
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(30),
@@ -88,8 +76,8 @@ class HomePage extends StatelessWidget {
                     ),
                   ),
                   Container(
-                    width: MediaQuery.of(context).size.width / 3,
-                    height: MediaQuery.of(context).size.height / 2,
+                    width: MediaQuery.of(context).size.width <= 768 ? 180 : MediaQuery.of(context).size.width / 3,
+                    height: MediaQuery.of(context).size.width <= 768 ? 230 :MediaQuery.of(context).size.height / 2,
                     padding: EdgeInsets.all(45),
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(30),
@@ -263,3 +251,5 @@ class HomePage extends StatelessWidget {
     );
   }
 }
+
+
